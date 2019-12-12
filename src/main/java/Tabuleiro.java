@@ -106,6 +106,9 @@ public class Tabuleiro {
 						clicaCamposLivresEmVoltaCampoMarcado(camposEmVolta);
 					}
 					
+					if(achou) {
+						return achou;
+					}
 				}
 			}
 		}
@@ -119,7 +122,7 @@ public class Tabuleiro {
 		}
 //		System.out.println(retornaQuantidadeMinasEmVolta(campo) + " " + retornaCamposJaMarcadosEmVolta(campo).size());
 		
-		return retornaCamposJaMarcadosEmVolta(campo).size() == retornaQuantidadeMinasEmVoltaRestante(campo);
+		return retornaCamposJaMarcadosEmVolta(campo).size() == retornaQuantidadeMinasEmVoltaTotal(campo);
 	}
 	
 	public int getTamanho() {
